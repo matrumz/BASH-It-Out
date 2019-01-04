@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+read -ep "ssid: " ssid
+read -ep "psk: " psk
+
+contents=$(cat <<EOF
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=US
+
+network={
+        ssid="%s"
+        psk="%s"
+        key_mgmt=WPA-PSK
+}\n
+EOF
+)
+
+printf "$contents" $ssid $psk

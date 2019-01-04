@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+: '
+Create a broken ln
+
+Useful for version links when version is unset
+'
+set -e
+
+# Make sure non-existent target is non-existent
+if [ -d "$1" ]; then
+    echo "Cannot create broken link to $1 (already exists)"
+    exit 1
+fi
+
+mkdir -p $1
+ln -s $1 $2
+rmdir $1

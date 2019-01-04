@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+c=$1
+shift
+ls $@ | head --lines $c
