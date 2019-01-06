@@ -1,0 +1,44 @@
+" Configuration
+"" Read modelines at the beginning of files
+set modelines=1
+set modeline
+set visualbell " disable audiobell
+set t_vb= " disable visual-bell by clearing bell length
+
+" Info
+set laststatus=2 " info bar always on
+set ruler " line/character position display
+
+" Styling
+set background=dark
+set number
+syntax on
+set showmatch " shows matching brackets
+
+" Navigation
+"" Return to last position when reopening file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+" Searching
+set incsearch
+set hlsearch
+
+" Tabbing
+set tabstop=4
+set expandtab
+set autoindent " auto should be on when using smart
+set smartindent
+
+" Aliases
+"" Correcting caps
+:command W w
+:command Q q
+"" Enable/disable spell-check
+:command SPELL setlocal spell spelllang=en_us
+:command NOSPELL set nospell
+"" Use w!! when you forget sudo
+cmap w!! w !sudo tee > /dev/null %
+
+

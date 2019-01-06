@@ -1,0 +1,33 @@
+# This is Git's per-user configuration file.
+[user]
+	name = "matrumz"
+	email = matrumz@hotmail.com
+[core]
+	editor = vim
+	autocrlf = input
+	# Don't consider trailing space change as a cause for merge conflicts
+	whitespace = -trailing-space
+[status]
+	# Recursively traverse untracked directories to display all contents
+	showUntrackedFiles = all
+[push]
+	default = simple
+[merge]
+        ff = false
+	commit = false
+	# Display common-ancestor blocks in conflict hunks
+	conflictStyle = diff3
+[mergetool]
+	# Clean up backup files created by merge tools on tool exit
+	keepBackup = false
+	# Clean up temp files created by merge tools on tool exit
+	keepTemporaries = false
+	# Put the temp files in a dedicated dir anyway
+	writeToTemp = true
+	# Auto-accept file prompts when launching merge tools
+	prompt = false
+[grep]
+	extendedRegexp = true
+[alias]
+	stash-all = stash save --include-untracked
+	glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'

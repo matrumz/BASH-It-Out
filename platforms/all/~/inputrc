@@ -1,0 +1,2 @@
+# Disable ultra-annoying BASH bell
+set bell-style none

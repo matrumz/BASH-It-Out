@@ -1,0 +1,14 @@
+# Munis
+alias sqlerror='finderr'
+alias tfs='cd /data/tfs_workspaces/mathew.rumsey/'
+alias genmake='genmak'
+alias e='cat errorlist'
+alias e.='cat ../errorlist'
+alias e..='cat ../../errorlist'
+
+# Projects
+#alias infbud="INT_DEV mathew.rumsey_16cs_1 && cd bg"
+#alias glimptjerw="2017.1.10.0 mathew.rumsey_14cs_1 && cd gl/glimptje"
+#alias workflow="2017.3.0.0 mathew.rumsey_14cs_1 && cd gl/GLWorkflowUtilities"
+alias flex='GFDev && cd imports/..'
+alias gfdev='cd /data/tfs_workspaces/mathew.rumsey/GFDev'

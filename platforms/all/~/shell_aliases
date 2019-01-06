@@ -1,0 +1,54 @@
+# Modifying this file
+alias vimalias='vim ~/.shell_aliases'
+
+# System config
+alias startup='sudo vim /etc/rc.local'
+
+# Programs aliases
+alias sqlite='sqlite3'
+
+# Common typos
+alias claer='clear'
+
+# Navigation
+## back-directory
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+
+# Searching
+alias findfile='sudo find / -iname'
+alias findpath='sudo find / -path'
+
+# Clearing
+alias c='clear'
+alias cl='clear && ls'
+alias cll='clear && ll'
+
+# ls
+alias ls='ls --color=auto'
+alias ll='ls -alh'
+
+# grep
+alias grep='grep -En --color=always'
+alias pgrep='grep -Pnir --color=always'
+
+# make
+alias m='make'
+alias cleanmake="make clean && make"
+alias cmake='clear && make'
+alias cm='cmake'
+alias clean='make clean'
+
+# mk
+alias mkpath='mkdir -p'
+
+# Git
+## List untracked files
+alias lsut='git ls-files --exclude-from=.gitignore --others'
+## List tracked files
+alias lst='git ls-files --exclude-from=.gitignore'
+
+# Screen (program)
+alias screenlist='screen -list'
+
